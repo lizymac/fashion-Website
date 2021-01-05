@@ -1,0 +1,253 @@
+:root {
+  --primary-color: rgba(243, 237, 227, 0.75);
+  --overlay-color: rgba(243, 231, 190, 0.85);
+  --menu-speed: 0.75s;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+.showcase {
+  background-image: url("./images/showcase1.jpeg");
+  min-height: 100%;
+}
+
+.pimg1,
+.pimg2,
+.pimg3,
+.showcase {
+  position: relative;
+  opacity: 0.8;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* fixed will give the parallax effect */
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("./images/pimg1.jpeg");
+  min-height: 200px;
+}
+
+.pimg2 {
+  background-image: url("./images/pimg2.jpeg");
+  min-height: 200px;
+}
+
+.pimg3 {
+  background-image: url("./images/pimg3.jpeg");
+  min-height: 200px;
+}
+
+/* section style */
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color: white;
+  color: #666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #6e6e6e;
+  color: #fff;
+  padding: 10px;
+}
+
+.ptext .border:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+/* women section */
+.women > div {
+  background: #eee;
+  padding: 1em;
+}
+
+.women {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5em;
+}
+
+.women > div {
+  height: 25em;
+  width: 20em;
+  background-position: center;
+  background-size: cover;
+}
+
+.women > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+}
+
+.women .img1 {
+  background-image: url("./images/2.jpg");
+}
+
+.women .img2 {
+  background-image: url("./images/3.jpeg");
+}
+
+.women .img3 {
+  background-image: url("./images/4.jpeg");
+}
+
+.women .img4 {
+  background-image: url("./images/5.jpeg");
+}
+
+.women .img5 {
+  background-image: url("./images/6.jpeg");
+}
+
+.women .img6 {
+  background-image: url("./images/7.jpeg");
+}
+
+/* men section */
+.men > div {
+  background: #eee;
+  padding: 1em;
+}
+
+.men {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5em;
+}
+
+.men > div {
+  height: 25em;
+  width: 20em;
+  background-position: center;
+  background-size: cover;
+}
+
+.men > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+}
+
+.men .img1 {
+  background-image: url("./images/m1.jpeg");
+}
+
+.men .img2 {
+  background-image: url("./images/m2.jpeg");
+}
+
+.men .img3 {
+  background-image: url("./images/m3.jpeg");
+}
+
+.men .img4 {
+  background-image: url("./images/m4.jpeg");
+}
+
+.men .img5 {
+  background-image: url("./images/m5.jpeg");
+}
+
+.men .img6 {
+  background-image: url("./images/m6.jpeg");
+}
+
+/* contact form */
+
+.myForm {
+  padding: 20px;
+  text-align: start;
+}
+
+.myForm .form-group {
+  padding-bottom: 15px;
+}
+
+.myForm label {
+  display: block;
+}
+
+.myForm input[type="text"],
+.myForm textarea {
+  padding: 8px;
+  width: 50%;
+  outline: none;
+}
+
+.button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  color: #333;
+  background-color: #ddd;
+  font-size: 0.72em;
+}
+/* take away the grid columns and have the images stacked on the smaller deviced */
+@media (max-width: 700px) {
+  .women,
+  .men {
+    display: block;
+  }
+}
+
+/* if the device size is smaller */
+@media (max-width: 568px) {
+  .showcase,
+  .pimg2,
+  .pimg1,
+  .pimg3 {
+    background-attachment: scroll;
+  }
+
+  .myForm input[type="text"],
+  .myForm textarea {
+    padding: 8px;
+    width: 100%;
+    outline: none;
+  }
+}
