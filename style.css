@@ -232,7 +232,7 @@ html {
   .women,
   .men {
     display: block;
-    margin-right: 80px;
+    margin-left: -180px;
   }
 }
 
