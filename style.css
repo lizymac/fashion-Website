@@ -233,6 +233,7 @@ html {
   .men {
     display: block;
     margin-left: -55px;
+    grid-row-gap: 1em;
   }
 }
 
